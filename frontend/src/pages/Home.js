@@ -12,17 +12,9 @@ const Home = () => {
 
   const loadingArray = new Array(4).fill(null);
   const loadingArrayFeature = new Array(10).fill(null);
-  const categoryList =[...new Set(productData.map(el=>el.category))]
-  console.log(categoryList)
+  
 
-
-  const [filterby,setFilterBy] = useState("")
-  const [dataFilter,setDataFilter] = useState([])
-  useEffect(()=>{
-    setDataFilter(()=>{
-      
-    })
-  })
+  
   return (
     <div className='p-2 md:p-4'>
       <div className='md:flex py-2'>
@@ -81,23 +73,7 @@ const Home = () => {
           />
         ))}
       </div>
-      <div className='my-5'>
-      <h2 className='font-bold text-2xl text-slate-800'>Your Product</h2>
-      <div className='flex gap-5 justify-center overflow-scroll '>
-
-        {
-          categoryList[0] && categoryList.map(el =>{
-            return(
-              <FilterProduct category={el}/>
-            )
-          })
-        }
-        
-      </div>
-      <div className=''>
-       
-      </div>
-      </div>
+     
     </div>
   );
 }
