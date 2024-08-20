@@ -73,8 +73,8 @@ const Newproduct = () => {
    
   }
   return (
-    <div className="p-4  bg-green-50">
-       <form className='m-auto w-full max-w-md  shadow flex flex-col p-3 bg-white' onSubmit={handleSubmit}>
+    <div className="py-4 min-h-screen bg-green-50">
+       <form className='m-auto w-full my-6 max-w-md  shadow flex flex-col p-3 bg-white' onSubmit={handleSubmit}>
         <label htmlFor='name'>Name</label>
         <input type={"text"}  name="name" className='bg-slate-200 p-1 my-1' onChange={handleOnChange} value={data.name}/>
 

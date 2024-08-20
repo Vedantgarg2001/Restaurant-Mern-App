@@ -147,6 +147,11 @@ app.post("/contactInfo", async (req, res) => {
     }
   });
   
-
+app.get("/product",async(req,res)=>{
+  const data=await productModel.find({})
+  res.send(data)
+})
   // Start server
 app.listen(PORT, () => console.log("Server is running on " + PORT));
+
+

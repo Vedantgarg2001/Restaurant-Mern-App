@@ -16,7 +16,6 @@ const Signup = () => {
     confirmPassword: "",
     image: ""
   });
-  console.log(data);
 
   const handleShowPassword = () => {
     setShowPassword(prev => !prev);
@@ -82,11 +81,11 @@ const Signup = () => {
   };
 
   return (
-    <div className='p-3  bg-green-50 md:p-4'>
+    <div className='min-h-screen p-3 bg-green-50 md:p-4 flex items-center justify-center'>
       <Toaster />
       <div className='w-full max-w-sm bg-white m-auto flex items-center flex-col p-4'>
         <div className='relative w-20 h-20 overflow-hidden rounded-full drop-shadow-md shadow-md cursor-pointer'>
-          <img src={data.image ? data.image : loginSignImage} className='w-full h-full' />
+          <img src={data.image ? data.image : loginSignImage} className='w-full h-full' alt="Profile" />
           <label htmlFor='profileImage' className='absolute bottom-0 h-1/3 bg-slate-500 bg-opacity-50 w-full text-center'>
             <p className='text-sm p-1 text-white cursor-pointer' onClick={data.image ? handleRemoveProfileImage : null}>
               {data.image ? "Remove" : "Upload"}
